@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NewsHub - News Aggregator</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <h1>News<span>Hub</span></h1>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search news..."
+            >
+
+            <button onclick="searchNews()">Search</button>
+
+            <button id="languageBtn" onclick="changeLanguage()">English</button>
+
+            <button onclick="toggleDarkMode()">🌙</button>
+        </div>
+    </header>
+
+    <nav id="categories">
+        <button class="active"
+                onclick="filterNews('All', this)">
+            All News
+        </button>
+
+        <button onclick="filterNews('National', this)">
+            National
+        </button>
+
+        <button onclick="filterNews('International', this)">
+            International
+        </button>
+
+        <button onclick="filterNews('Technology', this)">
+            Technology
+        </button>
+
+        <button onclick="filterNews('Sports', this)">
+            Sports
+        </button>
+
+        <button onclick="filterNews('Business', this)">
+            Business
+        </button>
+
+        <button onclick="filterNews('Education', this)">
+            Education
+        </button>
+    </nav>
+
+    <section class="hero">
+        <h2>Your Daily News Destination</h2>
+        <p>All your news in one place. Stay informed, stay ahead!</p>
+    </section>
+
+    <main class="container">
+
+        <h2 class="section-title" id="sectionTitle">
+            Latest News
+        </h2>
+
+        <div id="newsGrid" class="news-grid"></div>
+
+        <p id="message"></p>
+
+    </main>
+
+    <footer>
+        <p>© 2026 NewsHub | News Aggregator Website</p>
+        <p>Designed for educational purposes by Mohd Adil Raza Akhtar.</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

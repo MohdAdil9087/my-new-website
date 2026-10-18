@@ -1,0 +1,281 @@
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #222;
+    transition: 0.3s;
+}
+
+/* Header */
+
+header {
+    background: #142850;
+    color: white;
+    padding: 20px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header h1 span {
+    color: #ffcc00;
+}
+
+/* Change Language button */
+#languageBtn {
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+/* Search Box */
+
+.search-box {
+    display: flex;
+    gap: 8px;
+}
+
+.search-box input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 220px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.search-box button {
+    background: #ffcc00;
+    font-weight: bold;
+}
+
+/* Navigation */
+
+nav {
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px #ddd;
+}
+
+nav button {
+    background: #e8edf5;
+    color: #142850;
+    font-weight: bold;
+}
+
+nav button:hover,
+nav button.active {
+    background: #142850;
+    color: white;
+}
+
+/* Hero Section */
+
+.hero {
+    margin: 25px 5%;
+    padding: 35px;
+    border-radius: 10px;
+    color: white;
+
+    background: linear-gradient(
+        120deg,
+        #142850,
+        #3769a5
+    );
+}
+
+.hero h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* News Section */
+
+.container {
+    padding: 10px 5% 35px;
+}
+
+.section-title {
+    margin: 15px 0 20px;
+    border-left: 5px solid #ffcc00;
+    padding-left: 12px;
+}
+
+/* News Cards Grid */
+
+.news-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 22px;
+}
+
+/* Individual News Card */
+
+.news-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 3px 12px #00000012;
+
+    transition: transform 0.2s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #ddd;
+}
+
+/* News Content */
+
+.news-content {
+    padding: 17px;
+}
+
+.category {
+    display: inline-block;
+
+    color: #142850;
+    background: #e8edf5;
+
+    padding: 5px 9px;
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.news-content h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.news-content a {
+    display: inline-block;
+
+    background: #142850;
+    color: white;
+
+    padding: 9px 13px;
+    border-radius: 5px;
+
+    text-decoration: none;
+}
+
+.news-content a:hover {
+    background: #3769a5;
+}
+
+/* Messages */
+
+#message {
+    padding: 20px 0;
+    color: #666;
+}
+
+/* Footer */
+
+footer {
+    background: #142850;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    line-height: 1.8;
+}
+
+/* Dark Mode */
+
+body.dark {
+    background: #121212;
+    color: #eee;
+}
+
+body.dark nav,
+body.dark .news-card {
+    background: #222;
+    color: white;
+}
+
+body.dark nav button {
+    background: #333;
+    color: white;
+}
+
+body.dark nav button.active {
+    background: #3769a5;
+}
+
+body.dark .news-content p {
+    color: #ccc;
+}
+
+body.dark .section-title {
+    color: white;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .search-box input {
+        width: 180px;
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+}
