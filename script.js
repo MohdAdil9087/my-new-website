@@ -1,6 +1,6 @@
 
 // GNews API Key
-const API_KEY = "";
+const API_KEY = "7194aef79aff61766599b999c0d6c254";
 // Current category
 let currentCategory = "All";
 // Load News
