@@ -62,6 +62,8 @@ async function loadNews(category = "All", query = "") {
                 : "";
     } catch (error) {
         console.error(error);
+        //new 
+        console.log("Current language:", currentLanguage);
         message.textContent =
             "News load nahi hui. API key aur internet check karo.";
     }
