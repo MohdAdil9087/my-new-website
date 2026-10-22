@@ -24,6 +24,7 @@ async function loadNews(category = "All", query = "") {
     const message = document.getElementById("message");
     grid.innerHTML = "";
     message.textContent = "Loading news...";
+
     let url =
         'https://gnews.io/api/v4/top-headlines?' +
          `country=in&lang=${currentLanguage}&max=10&apikey=${API_KEY}`;
